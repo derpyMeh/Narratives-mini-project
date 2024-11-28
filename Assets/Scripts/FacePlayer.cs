@@ -5,6 +5,11 @@ public class FacePlayer : MonoBehaviour
     // Reference to the player object
     public Transform player;
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     void Update()
     {
         if (player != null)
@@ -26,4 +31,5 @@ public class FacePlayer : MonoBehaviour
             }
         }
     }
+
 }
