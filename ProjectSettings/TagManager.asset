@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Anchor
+  - Location_Harbour
+  - Location_Smith
+  - Location_MiddlePompei
   layers:
   - Default
   - TransparentFX

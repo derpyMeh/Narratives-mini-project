@@ -13,13 +13,15 @@ public class MakeDecision : MonoBehaviour
     [Header("Location to go to")]
     public PersistentManager.WorldLocation Location;
 
-    //private TextMeshProUGUI textMeshPro;
+    private TextMesh textMesh;
 
     private CapsuleCollider capsuleCollider;
     private void Start()
     {
-        capsuleCollider = GetComponent<CapsuleCollider>();
+        capsuleCollider = GetComponentInChildren<CapsuleCollider>();
 
+        textMesh = GetComponentInChildren<TextMesh>();
+        textMesh.text = Location.ToString();
         //text
         //textMeshPro = GetComponentInChildren<TextMesh>();
 
