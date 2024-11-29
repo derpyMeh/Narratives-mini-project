@@ -4,15 +4,15 @@ public class HideOnPlay : MonoBehaviour
 {
     void Start()
     {
-        foreach (Transform t in GetComponentInChildren<Transform>())
+        foreach (MeshRenderer renderer in GetComponentsInChildren<MeshRenderer>())
         {
-            t.gameObject.SetActive(false);
+            renderer.enabled = false;
         }
-        //GetComponentInChildren<TMP_Text>().enabled = false;
-    }
 
-    void Update()
-    {
-        
+        //foreach (TextMesh textMesh in GetComponentsInChildren<TextMesh>())
+        //{
+        //    textMesh
+        //}
+        //GetComponentInChildren<TMP_Text>().enabled = false;
     }
 }

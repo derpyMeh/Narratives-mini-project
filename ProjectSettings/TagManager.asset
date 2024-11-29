@@ -8,6 +8,7 @@ TagManager:
   - Location_Harbour
   - Location_Smith
   - Location_MiddlePompei
+  - SurgePoint
   layers:
   - Default
   - TransparentFX
