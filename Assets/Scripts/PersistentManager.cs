@@ -15,7 +15,6 @@ public class PersistentManager : MonoBehaviour
     public WorldLocation CurrentLocation;
     public WorldLocation NextLocation;
 
-    //public Transform playerTransform;
 
     private void Awake()
     {
@@ -29,8 +28,6 @@ public class PersistentManager : MonoBehaviour
         {
             Destroy(gameObject); // Destroy duplicate instances
         }
-
-        //playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     public void GotoScene(WorldLocation location)
@@ -41,24 +38,6 @@ public class PersistentManager : MonoBehaviour
         {// if there is more avaliable scenes 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
 
-            //Transform playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-
-            //// Moving the player to the position of the location marker..
-            //switch (location)
-            //{
-            //    case WorldLocation.MiddlePompei:
-            //        playerTransform.position = GameObject.FindGameObjectWithTag("Location_MiddlePompei").transform.position;
-            //        break;
-            //    case WorldLocation.Smith:
-            //        playerTransform.position = GameObject.FindGameObjectWithTag("Location_Smith").transform.position;
-            //        break;
-            //    case WorldLocation.Harbour:
-            //        playerTransform.position = GameObject.FindGameObjectWithTag("Location_Harbour").transform.position;
-            //        break;
-            //    default:
-            //        Debug.LogError("No location found!");
-            //        break;
-            //}
         }
         Debug.Log("next scene loaded");
     }
