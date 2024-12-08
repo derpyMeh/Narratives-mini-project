@@ -1,11 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-//using TMPr;
-//using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 
 public class MakeDecision : MonoBehaviour
 {
@@ -15,12 +12,18 @@ public class MakeDecision : MonoBehaviour
     private TextMesh textMesh;
 
     private BoxCollider boxcollider;
+
     private void Start()
     {
         boxcollider = GetComponentInChildren<BoxCollider>();
 
         textMesh = GetComponentInChildren<TextMesh>();
         textMesh.text = Location.ToString();
+
+        Transform playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+
+        if (Vector3.Distance(transform.position, playerTransform.position) > 40)
+            textMesh.text = "";
         //text
         //textMeshPro = GetComponentInChildren<TextMesh>();
 

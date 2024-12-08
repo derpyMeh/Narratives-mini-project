@@ -12,7 +12,6 @@ public class PersistentManager : MonoBehaviour
     // String values
     [SerializeField]
     public int SceneID;
-    public WorldLocation CurrentLocation;
     public WorldLocation NextLocation;
 
     private void Awake()
