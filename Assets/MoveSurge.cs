@@ -14,7 +14,7 @@ public class MoveSurge : MonoBehaviour
 
     private void Start()
     {
-        points = GameObject.FindGameObjectsWithTag("SurgePoint");
+        //points = GameObject.FindGameObjectsWithTag("SurgePoint");
 
 
         // Initialize variables
