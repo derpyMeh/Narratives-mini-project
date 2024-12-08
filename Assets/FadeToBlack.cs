@@ -18,6 +18,9 @@ public class FadeToBlack : MonoBehaviour
             fadeCanvasGroup.alpha = 0;
             fadeText.enabled = false;
             if (fadeTextUI != null) fadeTextUI.enabled = false;
+            
+            // Start the coroutine
+            StartCoroutine(RunAfterDelay());
         }
 
         private void Update()
@@ -32,6 +35,17 @@ public class FadeToBlack : MonoBehaviour
                 FadeOut();
             }
             
+        }
+        
+        private IEnumerator RunAfterDelay()
+        {
+            // Wait for 15 seconds
+            yield return new WaitForSeconds(15f);
+            
+            _FadeToBlack("Loading...");
+
+            // Code to execute after 15 seconds
+            Debug.Log("15 seconds have passed!");
         }
 
         public void _FadeToBlack(string message)
