@@ -20,22 +20,9 @@ public class FadeToBlack : MonoBehaviour
             if (fadeTextUI != null) fadeTextUI.enabled = false;
             
             // Start the coroutine
-            StartCoroutine(RunAfterDelay());
+            //StartCoroutine(RunAfterDelay());
         }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                _FadeToBlack("Loading...");
-            }
-            
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                FadeOut();
-            }
-            
-        }
+        
         
         private IEnumerator RunAfterDelay()
         {
