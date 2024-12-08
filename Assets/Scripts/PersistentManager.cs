@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class PersistentManager : MonoBehaviour
 {
-    public enum WorldLocation { MiddlePompei, Harbour, Smith }
+    public enum WorldLocation { Alley, Harbour, Smith, Villa, Market, Outskirts, EscapeFromOutskirts, EscapeFromHarbour }
     // Singleton instance
     public static PersistentManager Instance { get; private set; }
 
@@ -14,7 +14,6 @@ public class PersistentManager : MonoBehaviour
     public int SceneID;
     public WorldLocation CurrentLocation;
     public WorldLocation NextLocation;
-
 
     private void Awake()
     {
@@ -34,11 +33,13 @@ public class PersistentManager : MonoBehaviour
     {
         NextLocation = location;
 
-        if (SceneManager.GetActiveScene().buildIndex + 1 <= SceneManager.sceneCount)
-        {// if there is more avaliable scenes 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
+        //if (SceneID + 1 <= SceneManager.sceneCount)
+        //{// if there is more avaliable scenes 
+            SceneManager.LoadScene(SceneID + 1, LoadSceneMode.Single);
+            SceneID++;
 
-        }
-        Debug.Log("next scene loaded");
+            Debug.Log("next scene loaded");
+        //}
+       
     }
 }

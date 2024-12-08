@@ -9,16 +9,15 @@ using UnityEngine.SceneManagement;
 
 public class MakeDecision : MonoBehaviour
 {
-
     [Header("Location to go to")]
     public PersistentManager.WorldLocation Location;
 
     private TextMesh textMesh;
 
-    private CapsuleCollider capsuleCollider;
+    private BoxCollider boxcollider;
     private void Start()
     {
-        capsuleCollider = GetComponentInChildren<CapsuleCollider>();
+        boxcollider = GetComponentInChildren<BoxCollider>();
 
         textMesh = GetComponentInChildren<TextMesh>();
         textMesh.text = Location.ToString();
@@ -33,7 +32,7 @@ public class MakeDecision : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            capsuleCollider.enabled = false;
+            boxcollider.enabled = false;
             PersistentManager.Instance.GotoScene(Location);
         }
     }

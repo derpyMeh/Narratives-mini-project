@@ -9,6 +9,10 @@ TagManager:
   - Location_Smith
   - Location_MiddlePompei
   - SurgePoint
+  - Location_Alley
+  - Location_Villa
+  - Location_Outskirts
+  - Location_Market
   layers:
   - Default
   - TransparentFX
