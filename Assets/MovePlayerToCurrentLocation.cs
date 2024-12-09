@@ -6,7 +6,7 @@ using static UnityEditor.FilePathAttribute;
 
 public class MovePlayerToCurrentLocation : MonoBehaviour
 {
-    private void OnEnable()
+    private void Start()
     {
         Transform playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
